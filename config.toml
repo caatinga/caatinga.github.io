@@ -1,0 +1,42 @@
+# The URL the site will be built for
+base_url = "https://caatinga.github.io"
+
+output_dir = "public"
+theme = "terminimal"
+compile_sass = true
+minify_html = true
+build_search_index = false
+
+taxonomies = [
+    {name = "tags"}
+]
+
+[markdown]
+highlight_code = true
+
+[extra]
+author = "Caatinga"
+logo_text = "Caatinga"
+background_color = "dark"
+accent_color = "green"
+use_full_hack_font = true
+page_titles = "combined"
+enable_post_view_navigation = true
+post_view_navigation_prompt = "Read more"
+
+
+
+menu_items = [
+    # each of these is optional, name and url are required
+    # $BASE_URL is going to be substituted by base_url from configuration
+    {name = "blog", url = "$BASE_URL"},
+    
+    # tags should only be enabled if you have "tags" taxonomy
+    # see documentation below for more details
+    {name = "tags", url = "$BASE_URL/tags"},
+    {name = "archive", url = "$BASE_URL/archive"},
+    {name = "about me", url = "$BASE_URL/about"},
+    
+    # set newtab to true to make the link open in new tab
+    {name = "github", url = "https://github.com/caatinga", newtab = true},
+]
